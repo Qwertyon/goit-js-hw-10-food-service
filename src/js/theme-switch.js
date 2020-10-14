@@ -15,10 +15,12 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-btnSwitcherRef.addEventListener('click', onSwitcherClick);
-
-function onSwitcherClick(event) {
+const onSwitcherClick = (event) => {
   bodyRef.classList.toggle('dark-theme');
   bodyRef.classList.toggle('light-theme');
   localStorage.setItem('theme', bodyRef.getAttribute('class'));
 }
+
+btnSwitcherRef.addEventListener('click', onSwitcherClick);
+
+
